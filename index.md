@@ -1,37 +1,64 @@
-## Welcome to GitHub Pages
+# zoo_app Flutter App
 
-You can use the [editor on GitHub](https://github.com/tzinegf/zoo_app/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Aplicativo desenvolvido em Flutter para consulta de animais de um zoologico utilizando a API [Zoo Animal API](https://zoo-animal-api.herokuapp.com/) 
+## Author
 
-### Markdown
+**Edson Gomes** 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* *Meu perfil profissional no* [LinkedIn](https://www.linkedin.com/in/edson-gomes-b5b3a175/)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Estrutura do projeto:
 
-- Bulleted
-- List
+<pre> 
+-main.dart
+--app
+------data
+---------models
+------------animal_model.dart
+---------services
+------------animal_repository.dart
+---------services
+------------pokemon_service.dart
+------screens
+---------animals_details
+------------widgets
+----------------details_body.dart
+----------------list_tile_animal_data.dart
+------------details_controller.dart
+------------details.dart
+---------home
+------------widgets
+----------------home_body.dart
+------------home_controller.dart
+------------home.dart
+---------routes
+------------routes.dart
+---------shared
+------------app_colors.dart
+------------app_text_styles.dart
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+ 
+</pre>
+##  Bibliotecas de terceiros:
+ 
+ <pre>
+    http: ^0.13.4
+    provider: ^6.0.3
+ </pre>
+ 
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+> Funcionalidades do App
+* Com o app é possível buscar por por 10 animais aleatorios clicando no botão inferior da tela home, e ao clicar em determinado animal é exibido os detalhes do mesmo.
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tzinegf/zoo_app/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Tecnologias utilizadas
 
-### Support or Contact
+Para este projeto foram utilizados as seguintes tecnologias:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* Dart[https://dart.dev/]
+* Flutter[https://flutter.dev/]
+* Provider[https://pub.dev/packages/provider]
