@@ -15,7 +15,7 @@ class Routes {
           settings: settings,
         );
       default:
-        throw const FormatException('Route not found');
+        throw const FormatException('Rota não encontrada');
     }
   }
 }

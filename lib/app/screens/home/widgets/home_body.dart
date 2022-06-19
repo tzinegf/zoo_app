@@ -33,7 +33,7 @@ class HomeBody extends StatelessWidget {
               },
             )
           : const Center(
-              child: Text('Nehum animal encontrado'),
+              child: Text('Nehum animal encontrado :('),
             );
     } else {
       return const Center(child: CircularProgressIndicator());

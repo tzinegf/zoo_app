@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoo_app/app/shared/app_text_styles.dart';
 
 class ListTileAnimalData extends StatelessWidget {
   ListTileAnimalData({Key? key, this.data, required this.title, this.trailing})
@@ -15,7 +16,7 @@ class ListTileAnimalData extends StatelessWidget {
       trailing: trailing,
       subtitle: Text(
         data ?? '',
-        style: const TextStyle(color: Colors.black),
+        style: AppTextStyles.defaultTextStyle,
       ),
     );
   }

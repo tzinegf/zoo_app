@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:zoo_app/app/data/models/animal_model.dart';
+import 'package:zoo_app/app/screens/animal_details/details_controller.dart';
 import 'package:zoo_app/app/screens/animal_details/widgets/list_tile_animal_data.dart';
+import 'package:zoo_app/app/shared/app_colors.dart';
+import 'package:zoo_app/app/shared/app_text_styles.dart';
 
 class DetailsBody extends StatelessWidget {
   DetailsBody({Key? key, required this.animal}) : super(key: key);
@@ -8,6 +12,7 @@ class DetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final datailsController = context.watch<DetailsController>();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Detalhes do animal'),
@@ -28,7 +33,7 @@ class DetailsBody extends StatelessWidget {
                       fit: BoxFit.fill,
                     ),
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
+                    color: AppColors.ligthColor,
                   ),
                 ),
               ),
@@ -36,11 +41,7 @@ class DetailsBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    animal!.name,
-                    style: const TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+                  Text(animal!.name, style: AppTextStyles.titleTextStyle),
                   const SizedBox(
                     height: 10,
                   )
@@ -54,12 +55,12 @@ class DetailsBody extends StatelessWidget {
                         ListTileAnimalData(
                           title: 'Tamanho ',
                           data:
-                              '${animal!.lengthMin} a ${animal!.lengthMax} metros',
+                              '${datailsController.convertPesToMeters(animal!.lengthMin)} a ${datailsController.convertPesToMeters(animal!.lengthMax)} metros',
                         ),
                         ListTileAnimalData(
                           title: 'Peso',
                           data:
-                              '${animal!.weightMin} a ${animal!.weightMax} Kg',
+                              '${datailsController.convertLibrasToKilograms(animal!.weightMin)} a ${datailsController.convertLibrasToKilograms(animal!.weightMax)} Kg',
                         )
                       ],
                     ),

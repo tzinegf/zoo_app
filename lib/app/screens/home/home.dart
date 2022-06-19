@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zoo_app/app/screens/home/home_controller.dart';
 import 'package:zoo_app/app/screens/home/widgets/home_body.dart';
+import 'package:zoo_app/app/shared/app_colors.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Buscar Animais'),
+        title: const Text('Animais do Zoo'),
       ),
       body: const HomeBody(),
       bottomNavigationBar: Row(
@@ -31,8 +32,10 @@ class Home extends StatelessWidget {
                   fontSize: 20,
                 )),
                 minimumSize: MaterialStateProperty.all(const Size(200, 40)),
-                backgroundColor: MaterialStateProperty.all(Colors.green),
-                foregroundColor: MaterialStateProperty.all(Colors.white),
+                backgroundColor:
+                    MaterialStateProperty.all(AppColors.primaryColor),
+                foregroundColor:
+                    MaterialStateProperty.all(AppColors.ligthColor),
               ),
               child: const Text('Buscar Animais'),
             ),
