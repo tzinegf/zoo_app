@@ -6,7 +6,7 @@ Aplicativo desenvolvido em Flutter para consulta de animais de um zoologico util
 
 **Edson Gomes** 
 
-* *Meu perfil profissional no* [LinkedIn][https://www.linkedin.com/in/edson-gomes-b5b3a175/]
+* *Meu perfil profissional no* [LinkedIn](https://www.linkedin.com/in/edson-gomes-b5b3a175/)
 
 
 ### Estrutura do projeto:
