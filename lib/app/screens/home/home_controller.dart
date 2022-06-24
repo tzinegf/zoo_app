@@ -10,7 +10,6 @@ class HomeController with ChangeNotifier {
   Future<void> getAnimals() async {
     setLoanding(true);
     animals = await _animalRepository.getAnimals();
-    notifyListeners();
     setLoanding(false);
   }
 
